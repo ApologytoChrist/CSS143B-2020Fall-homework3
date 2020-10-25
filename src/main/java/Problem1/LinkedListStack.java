@@ -22,12 +22,18 @@ public class LinkedListStack<T> implements Stack<T> {
     @Override
     public T pop() {
         // homework
+        if (data.size() == 0) {
+            return null;
+        }
         return data.removeLast();
     }
 
     @Override
     public T peek() {
         // homework
+        if (data.size() == 0) {
+            return null;
+        }
         return data.getLast();
     }
 
