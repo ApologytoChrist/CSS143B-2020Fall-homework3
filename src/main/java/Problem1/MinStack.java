@@ -29,15 +29,21 @@ public class MinStack<T> extends ArrayStack<Integer> {
 
     @Override
     public Integer pop() {
+        if (minStack.size() == 0) {
+            return null;
+        }
         // homework
-        if ()
+        minStack.pop();
         return super.pop();
     }
 
     public Integer getMin() {
         // homework
         // loop of any kind is not allowed
-        return null;
+        if (minStack == null || minStack.size() <= 0) {
+            return null;
+        }
+        return minStack.peek();
     }
 }
 

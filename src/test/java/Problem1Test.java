@@ -99,8 +99,9 @@ public class Problem1Test {
                 {3, 2, 1},
                 {3, 1, 2},
                 {2, 1, 3},
-                {2, 2, 2}};
-        Integer[] outputs = {null, 1, 1, 2, 1, 1, 1, 1, 2};
+                {2, 2, 2},
+                {1,2,3,4,5,6,7,8,9,10,11,12,13,14,16,0}};
+        Integer[] outputs = {null, 1, 1, 2, 1, 1, 1, 1, 2,0};
 
         Integer[] expect = new Integer[outputs.length];
         for (int i = 0; i < outputs.length; i++) {
