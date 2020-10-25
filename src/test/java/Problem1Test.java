@@ -56,9 +56,10 @@ public class Problem1Test {
                 "xx",
                 "[[x]]",
                 "[x",
-                null
+                null,
+                "[[[[[((((({{{{{}}}}})))))]]]]]"
         };
-        boolean[] expect = {false, true, false, true, true, true, false, true, false, false, false, true};
+        boolean[] expect = {false, true, false, true, true, true, false, true, false, false, false, true,true};
 
         for (int i = 0; i < inputs.length; i++) {
             boolean actual = isValid(inputs[i]);

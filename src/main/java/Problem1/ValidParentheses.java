@@ -53,9 +53,6 @@ public class ValidParentheses {
             }
         }
         if (stack.size() != 0) {
-            for (int i = 0; i < stack.size(); i++) {
-                System.out.println(stack.pop());
-            }
             return false;
         }
         return true;
