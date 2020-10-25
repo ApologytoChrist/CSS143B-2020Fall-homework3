@@ -12,12 +12,25 @@ public class SingleLinkedList {
 
     // copy constructor
     public SingleLinkedList(SingleLinkedList list) {
+        if (list == null) {
+            return;
+        }
         // homework
+        this.head = new ListNode();
+
+        ListNode tempListNodeCurrent = list.head;
+        for (int i = 0; i < list.getSize(); i++) {
+            this.add(tempListNodeCurrent.next.val);
+            tempListNodeCurrent = tempListNodeCurrent.next;
+
+        }
     }
 
     public int removeAll(int valueToRemove) {
         // homework
         // in-place
+        int removalIndex = 0;
+
         return -1; // place holder
     }
 
