@@ -9,26 +9,32 @@ public class LinkedListStack<T> implements Stack<T> {
 
     public LinkedListStack() {
         // homework
+        this.data = new LinkedList<T>();
     }
 
     @Override
     public boolean push(T val) {
         // homework
-        return false;   // place holder
+        data.add(val);
+        return true;
     }
 
     @Override
     public T pop() {
         // homework
-        T val = null;   // place holder
-        return val;   // place holder
+        if (data.size() == 0) {
+            return null;
+        }
+        return data.removeLast();
     }
 
     @Override
     public T peek() {
         // homework
-        T val = null;   // place holder
-        return val;   // place holder
+        if (data.size() == 0) {
+            return null;
+        }
+        return data.getLast();
     }
 
     @Override
