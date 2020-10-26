@@ -35,6 +35,7 @@ public class Problem2Test {
                 {3, 3},
                 {1, 4, 2},
                 {3, 4, 5, 6, 7},
+                {1,2,1,4,9,1,4,10,21,-23,54,90}
         };
         int[][] expected = {
                 {},
@@ -43,6 +44,7 @@ public class Problem2Test {
                 {3, 3},
                 {2, 4, 1},
                 {7, 6, 5, 4, 3},
+                {90,54,-23,21,10,4,1,9,4,1,2,1}
         };
         for (int i = 0; i < inputs.length; i++) {
             SingleLinkedList list = new SingleLinkedList(inputs[i]);
@@ -53,6 +55,17 @@ public class Problem2Test {
     }
 
     @Test
+    public void randomTest() {
+        int[] input = {1};
+        int[] expected = {1};
+
+        SingleLinkedList list = new SingleLinkedList((input));
+        SingleLinkedList reversed = new SingleLinkedList(expected);
+        list.reverse();
+        assertEquals(reversed, list);
+    }
+
+    @Test
     public void testRemoveAll() {
         int[][] inputs = {
                 {1, 2, 3},
@@ -60,17 +73,19 @@ public class Problem2Test {
                 {1, 1, 4, 2},
                 {3, 3, 3, 3},
                 {1, 1, 4, 2},
+                {1,1,1,1,1,1,1,1,3,5,6,7,8,99,123,321,2,4,3,2,1}
         };
-        int[] targets = {3, 2, 1, 3, 5};
+        int[] targets = {3, 2, 1, 3, 5, 1};
         int[][] expects = {
                 {1, 2},
                 {1, 4},
                 {4, 2},
                 {},
                 {1, 1, 4, 2},
+                {3,5,6,7,8,99,123,321,2,4,3,2}
         };
-        int[] expectedSize = {2, 2, 2, 0, 4};
-        int[] expectedCounts = {1, 2, 2, 4, 0};
+        int[] expectedSize = {2, 2, 2, 0, 4,12};
+        int[] expectedCounts = {1, 2, 2, 4, 0, 9};
 
         // empty list
         SingleLinkedList emptyList = new SingleLinkedList();
